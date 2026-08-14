@@ -1,6 +1,7 @@
 export const pages = [
   { slug: '', label: 'Home', group: 'main', keywords: 'welcome highlights news zoo' },
   { slug: 'about', label: 'Zoo Negara / About Us', group: 'main', keywords: 'about history mission vision 1963 species acres Malaysian Zoological Society' },
+  { slug: 'logo', label: 'Zoo Negara Logo', group: 'main', keywords: 'logo emblem Sang Kancil mouse deer gold green Malaysian Zoological Society meaning' },
   { slug: 'pillars', label: 'The 5 Pillars We Stand', group: 'main', keywords: 'education conservation research recreation training five pillars' },
   { slug: 'opening-hours', label: 'Opening Hours & Rates', group: 'visit', keywords: 'tickets price entrance fee hours show tram' },
   { slug: 'map', label: 'Zoo Map', group: 'visit', keywords: 'map directions exhibits wayfinding' },

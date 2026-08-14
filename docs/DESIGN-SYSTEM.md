@@ -2,7 +2,7 @@
 
 ## Direction
 
-The supplied homepage image is the visual source of truth: an immersive Malaysian rainforest, warm sunlight, deep green surfaces, restrained gold accents, translucent navigation and editorial typography. The same language is applied to all twelve pages.
+The supplied homepage image is the visual source of truth: an immersive Malaysian rainforest, warm sunlight, deep green surfaces, restrained gold accents, translucent navigation and editorial typography. The same language is applied to all thirteen pages.
 
 ## Color palette
 

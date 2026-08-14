@@ -1,5 +1,16 @@
 # Changelog
 
+## 14 August 2026 — Zoo Negara Logo page
+
+- Added the Zoo Negara Logo page as the thirteenth fully redesigned route.
+- Retained the official annotated logo artwork, both Sang Kancil emblem paragraphs and all four published logo explanations.
+- Added an animated logo showcase, responsive explanation cards and the original gold-and-green colour story.
+- Changed the Zoo Negara Logo dropdown destination to the internal redesigned page and marked it as redesigned.
+
+## 14 August 2026 — Homepage About Us link
+
+- Changed the “Read more on Zoo Negara” homepage button from the legacy external page to the redesigned internal About Us route.
+
 ## 14 August 2026 — The Five Pillars page
 
 - Added the Five Pillars page as the twelfth fully redesigned route.

@@ -78,7 +78,7 @@ const mainNavigation = [
     to: 'about',
     items: [
       { label: 'About Us', to: 'about' },
-      { label: 'Zoo Negara Logo', href: `${officialSite}/logo.html` },
+      { label: 'Zoo Negara Logo', to: 'logo' },
       { label: 'The 5 Pillars We Stand', to: 'pillars' },
       { label: 'A Journey Through Time', href: `${officialSite}/journeythroughtime.pdf` },
       { label: 'Careers', href: `${officialSite}/jobs.html` },
@@ -436,7 +436,7 @@ function HomePage() {
             <span className="eyebrow">Our story</span>
             <h2>Welcome to Zoo Negara</h2>
             <p>Zoo Negara was officially opened on 14th November 1963 and has matured into a well-known zoo all around the world. We have a total of over 3072 ......</p>
-            <ExternalLink href="https://www.zoonegara.my/zoo.html" className="text-link">Read more on Zoo Negara <ArrowRight size={16} /></ExternalLink>
+            <AppLink to="about" className="text-link">Read more on Zoo Negara <ArrowRight size={16} /></AppLink>
           </div>
         </div>
       </section>
@@ -587,6 +587,101 @@ function AboutPage() {
             <AppLink to="pillars">The 5 Pillars We Stand<ArrowRight size={16} /></AppLink>
             <ExternalLink href={`${officialSite}/journeythroughtime.pdf`}>A Journey Through Time<ArrowRight size={16} /></ExternalLink>
             <AppLink to="opening-hours">Plan your visit<ArrowRight size={16} /></AppLink>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+const logoMeaningItems = [
+  {
+    key: 'a',
+    title: 'Rooted fundamentals',
+    text: 'Guided by strong basic fundamentals deeply rooted into the ground, Zoo Negara is forging forward to transform itself into a 21st century zoo dedicated to conservation, recreation, education, training and research of flora and fauna. Also, the essence of continuous innovation is still ahead with a clear sense of direction.',
+  },
+  {
+    key: 'b',
+    title: 'A unified vision',
+    text: 'Collision of the two lines signifies the key strength of Zoo Negara sharing a unified vision for flora and fauna and laying the groundwork with continuous improvement. The intersection also denotes the progressive system thinking in Zoo Negara with the responsibility to communicate its extensive knowledge to be shared with local and international zoos.',
+  },
+  {
+    key: 'c',
+    title: 'A holistic circle',
+    text: 'These combined efforts spiral into a circle which symbolizes the holistic management approach to conservation as the key and unique characteristic of Zoo Negara, making it a model for other zoos. These efforts also further create a dynamic projectory at a higher level each time.',
+  },
+  {
+    key: 'd',
+    title: 'Earth-tone identity',
+    text: 'The earth tones of gold and green colours denote Zoo Negara’s surroundings for flora and fauna in Kuala Lumpur city.',
+  },
+];
+
+function LogoPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Zoo Negara"
+        title="Meaning of the Zoo Negara Logo"
+        text="The story of Sang Kancil, expressed through a living symbol of knowledge, conservation and progress."
+        image="/assets/animal-feeding.jpg"
+      />
+      <section className="section page-section logo-page">
+        <div className="container logo-origin">
+          <figure className="logo-showcase glass-card">
+            <div className="logo-halo" aria-hidden="true" />
+            <img src="/assets/zoo-logo.jpg" alt="Annotated Zoo Negara Malaysia logo showing sections a, b and c" />
+            <figcaption>Official annotated Zoo Negara logo artwork</figcaption>
+          </figure>
+
+          <div className="logo-origin-copy">
+            <span className="eyebrow">The emblem</span>
+            <h2>Sang Kancil — clever by nature</h2>
+            <div className="logo-origin-points">
+              <article>
+                <span>01</span>
+                <p>The Malaysian Zoological Society has adopted the drawing of a mouse deer or “Sang Kancil” as the Society’s emblem.</p>
+              </article>
+              <article>
+                <span>02</span>
+                <p>Sang Kancil is a clever, tricky mouse deer who is always finding himself in predicaments with animals that want to eat him or harm him, but he cleverly manages to escape each time.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div className="container logo-meaning-heading">
+          <span className="eyebrow">Reading the mark</span>
+          <h2>Four ideas drawn into one identity</h2>
+          <p>The annotations on the original artwork reveal how every line, intersection, circle and colour carries part of Zoo Negara’s purpose.</p>
+        </div>
+
+        <div className="container logo-meaning-grid">
+          {logoMeaningItems.map(({ key, title, text }) => (
+            <article className={`logo-meaning-card logo-meaning-${key} glass-card`} key={key}>
+              <div className="logo-letter">{key}</div>
+              <span className="eyebrow">Logo detail {key.toUpperCase()}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+              {key === 'd' && (
+                <div className="logo-colours" aria-label="Zoo Negara logo colours">
+                  <span><i className="logo-colour-gold" />Gold</span>
+                  <span><i className="logo-colour-green" />Green</span>
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+
+        <div className="container logo-next glass-card">
+          <div>
+            <span className="eyebrow">The story continues</span>
+            <h2>Explore what the mark stands for</h2>
+          </div>
+          <div>
+            <AppLink to="about">About Zoo Negara<ArrowRight size={16} /></AppLink>
+            <AppLink to="pillars">The Five Pillars<ArrowRight size={16} /></AppLink>
+            <AppLink to="conservation">Conservation work<ArrowRight size={16} /></AppLink>
           </div>
         </div>
       </section>
@@ -955,6 +1050,7 @@ function Footer() {
 const pageComponents = {
   '': HomePage,
   about: AboutPage,
+  logo: LogoPage,
   pillars: PillarsPage,
   'opening-hours': OpeningHoursPage,
   map: MapPage,
@@ -992,6 +1088,7 @@ export default function App() {
       '.exhibit-list a', '.source-artwork', '.map-viewport', '.adopt-intro',
       '.conservation-layout', '.event-lead', '.contact-bar', '.about-intro-layout',
       '.about-stats', '.about-purpose-grid', '.about-links',
+      '.logo-origin', '.logo-meaning-heading', '.logo-meaning-card', '.logo-next',
       '.pillars-intro', '.pillar-card', '.pillars-next',
     ].join(',');
     const elements = [...document.querySelectorAll(selectors)];
