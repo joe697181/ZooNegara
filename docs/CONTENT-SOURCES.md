@@ -1,11 +1,12 @@
 # Content Sources
 
-Content was audited on 14 August 2026 from the eleven Zoo Negara pages supplied for the redesign.
+Content was audited on 14 August 2026 from the twelve Zoo Negara pages supplied for the redesign.
 
 | Redesigned page | Source |
 | --- | --- |
 | Home | https://www.zoonegara.my/index.htm |
 | Zoo Negara / About Us | https://www.zoonegara.my/zoo.html |
+| The 5 Pillars We Stand | https://www.zoonegara.my/pillars.html |
 | Opening Hours & Rates | https://www.zoonegara.my/openinghours.html |
 | Zoo Map | https://www.zoonegara.my/map.html |
 | Animal Feeding | https://www.zoonegara.my/animal-feeding.html |
@@ -20,6 +21,7 @@ Content was audited on 14 August 2026 from the eleven Zoo Negara pages supplied 
 
 - The Home page retains the welcome copy, announcement, active highlight cards, Animal & Zookeeper videos, Latest News and Info links.
 - The About Us page retains the zoo's management, opening, acreage, specimen and species figures, open-concept development, vision and all three mission statements.
+- The Five Pillars page retains all five published headings and paragraphs, including the source wording, while presenting each pillar as an image-led editorial panel.
 - The rates page uses the source rate card dated **1 August 2026** and retains it as a full-size reference below the redesigned fee layout.
 - The source currently publishes `Children's World : 11.30 pm - 12.00 pm`; this exact value is retained rather than silently corrected.
 - The food page includes the nine active entries in the source. Commented-out historic outlets are not treated as published content.

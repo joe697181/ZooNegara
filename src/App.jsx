@@ -79,7 +79,7 @@ const mainNavigation = [
     items: [
       { label: 'About Us', to: 'about' },
       { label: 'Zoo Negara Logo', href: `${officialSite}/logo.html` },
-      { label: 'The 5 Pillars We Stand', href: `${officialSite}/pillars.html` },
+      { label: 'The 5 Pillars We Stand', to: 'pillars' },
       { label: 'A Journey Through Time', href: `${officialSite}/journeythroughtime.pdf` },
       { label: 'Careers', href: `${officialSite}/jobs.html` },
     ],
@@ -584,9 +584,98 @@ function AboutPage() {
         <div className="container about-links glass-card">
           <div><span className="eyebrow">Explore our foundations</span><h2>Learn more about Zoo Negara</h2></div>
           <div>
-            <ExternalLink href={`${officialSite}/pillars.html`}>The 5 Pillars We Stand<ArrowRight size={16} /></ExternalLink>
+            <AppLink to="pillars">The 5 Pillars We Stand<ArrowRight size={16} /></AppLink>
             <ExternalLink href={`${officialSite}/journeythroughtime.pdf`}>A Journey Through Time<ArrowRight size={16} /></ExternalLink>
             <AppLink to="opening-hours">Plan your visit<ArrowRight size={16} /></AppLink>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+const pillarItems = [
+  {
+    number: '01',
+    title: 'Education',
+    icon: BookOpen,
+    image: '/assets/home-marmoset.jpg',
+    text: 'We believe that education is the only key in creating awareness on wildlife conservation. Zoo Negara is an open classroom for young minds to learn and nurture their interest and care for wildlife. Check out our Education Package for schools and even for you!',
+  },
+  {
+    number: '02',
+    title: 'Conservation',
+    icon: Trees,
+    image: '/assets/official-tiger.jpg',
+    text: 'What will the world be without wildlife? Conserving Malaysian wildlife is one of our main missions. Animals such as the False Gharial and the Milky Storks are highly endangered wildlife that is not so well known compared to the Malayan Tiger or the Bornean Orang Utan. Zoo Negara has managed to breed these two species and we are currently working with the local Wildlife Department in releasing them back into the wild!',
+  },
+  {
+    number: '03',
+    title: 'Research',
+    icon: Search,
+    image: '/assets/rimba-03.jpg',
+    text: 'Zoo Negara provides a haven knowledge and experience for all. Researchers students from the Zoology, Biology and Veterinary fields have a multitude of choices when doing their research at the zoo as we have more than 400 species to choose from. We welcome everybody (includiing foreigners) to enter our doors of knowledge.',
+  },
+  {
+    number: '04',
+    title: 'Recreation',
+    icon: Sparkles,
+    image: '/assets/home-panda.jpg',
+    text: 'Entertainment is part of the Malaysian culture and the zoo is not an exception. Our animal shows potray the best in animal behaviour, all natural. Our animal shows are educational so visitors will be able to learn and have fun at the same time. Our shows are definitely not circus acts.',
+  },
+  {
+    number: '05',
+    title: 'Training',
+    icon: GraduationCap,
+    image: '/assets/animal-feeding.jpg',
+    text: "Zoo Negara strives to provide the very best in assisting other zoos in Malaysia through its vast strong knowledge and experience in the field of wildlife management. Further more, we are actively involved in the national and international zoological community thereby contributing to Malaysia's overall national role.",
+  },
+];
+
+function PillarsPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Zoo Negara"
+        title="The Five Pillars We Stand On"
+        text="Education · Conservation · Research · Recreation · Training"
+        image="/assets/official-tiger.jpg"
+      />
+      <section className="section page-section pillars-page">
+        <div className="container pillars-intro">
+          <div>
+            <span className="eyebrow">Our shared purpose</span>
+            <h2>Five commitments at the heart of Zoo Negara</h2>
+          </div>
+          <p>Each pillar connects people, knowledge and wildlife — shaping how the zoo teaches, protects, studies, welcomes and shares its experience.</p>
+        </div>
+
+        <div className="container pillars-list">
+          {pillarItems.map(({ number, title, icon: Icon, image, text }) => (
+            <article className="pillar-card glass-card" key={title}>
+              <div className="pillar-image">
+                <img src={image} alt="" loading="lazy" />
+                <span>{number}</span>
+              </div>
+              <div className="pillar-copy">
+                <div className="pillar-icon"><Icon size={24} /></div>
+                <span className="eyebrow">Pillar {number}</span>
+                <h2>{title}</h2>
+                <p>{text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="container pillars-next glass-card">
+          <div>
+            <span className="eyebrow">Continue exploring</span>
+            <h2>See these pillars in action</h2>
+          </div>
+          <div>
+            <AppLink to="education">Education programmes<ArrowRight size={16} /></AppLink>
+            <AppLink to="conservation">Conservation work<ArrowRight size={16} /></AppLink>
+            <AppLink to="about">About Zoo Negara<ArrowRight size={16} /></AppLink>
           </div>
         </div>
       </section>
@@ -866,6 +955,7 @@ function Footer() {
 const pageComponents = {
   '': HomePage,
   about: AboutPage,
+  pillars: PillarsPage,
   'opening-hours': OpeningHoursPage,
   map: MapPage,
   'animal-feeding': FeedingPage,
@@ -902,6 +992,7 @@ export default function App() {
       '.exhibit-list a', '.source-artwork', '.map-viewport', '.adopt-intro',
       '.conservation-layout', '.event-lead', '.contact-bar', '.about-intro-layout',
       '.about-stats', '.about-purpose-grid', '.about-links',
+      '.pillars-intro', '.pillar-card', '.pillars-next',
     ].join(',');
     const elements = [...document.querySelectorAll(selectors)];
     elements.forEach((element, index) => {

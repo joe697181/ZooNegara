@@ -1,6 +1,6 @@
 # Zoo Negara Immersive Redesign
 
-A responsive eleven-page redesign of the selected Zoo Negara website pages, following the supplied rainforest-and-gold homepage direction while retaining the published page content.
+A responsive twelve-page redesign of the selected Zoo Negara website pages, following the supplied rainforest-and-gold homepage direction while retaining the published page content.
 
 ## Run locally
 
@@ -16,6 +16,7 @@ To make a production build, run `npm run build`. The ready-to-host files will be
 
 - Home
 - Zoo Negara / About Us
+- The 5 Pillars We Stand
 - Opening Hours & Rates
 - Zoo Map with zoom controls
 - Animal Feeding

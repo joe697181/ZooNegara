@@ -1,5 +1,12 @@
 # Changelog
 
+## 14 August 2026 — The Five Pillars page
+
+- Added the Five Pillars page as the twelfth fully redesigned route.
+- Retained the published Education, Conservation, Research, Recreation and Training wording from Zoo Negara's source page.
+- Added alternating image-led pillar panels, responsive motion details and internal links to related redesigned pages.
+- Changed the official Five Pillars navigation and About Us destinations to the new internal route and marked them as redesigned.
+
 ## 14 August 2026 — Dropdown readability
 
 - Increased the navigation dropdown background opacity from the shared glass level to a dedicated 92% forest surface.

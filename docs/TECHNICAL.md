@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a static React website. It does not use login, a database, personal-data storage or a server-side API. Navigation uses URL hashes (for example `#/map`) so all eleven pages work on ordinary static hosting without special route-rewrite rules.
+This is a static React website. It does not use login, a database, personal-data storage or a server-side API. Navigation uses URL hashes (for example `#/map`) so all twelve pages work on ordinary static hosting without special route-rewrite rules.
 
 ## Main pieces
 
