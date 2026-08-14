@@ -12,6 +12,7 @@ The supplied homepage image is the visual source of truth: an immersive Malaysia
 | Rainforest | `#0A4635` | Cards and secondary surfaces |
 | Moss | `#6F8B55` | Supporting natural accent |
 | Sunlit Gold | `#D6A84B` | Buttons and active states |
+| Highlight Gold | `#F0BC52` | Text selection, keyboard focus and interactive highlights |
 | Warm Sand | `#E8D3A1` | Display headings and premium accents |
 | Ivory | `#F8F4EA` | High-contrast text |
 

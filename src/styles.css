@@ -4,6 +4,10 @@
   --moss: #6f8b55;
   --gold: #d6a84b;
   --gold-light: #e8d3a1;
+  --highlight: #f0bc52;
+  --highlight-ink: #10231a;
+  --highlight-soft: rgba(240, 188, 82, 0.17);
+  --highlight-line: rgba(240, 188, 82, 0.72);
   --ivory: #f8f4ea;
   --ink: #071e18;
   --muted: #aebdb4;
@@ -24,6 +28,13 @@
 html {
   scroll-behavior: smooth;
   background: #031b15;
+  accent-color: var(--highlight);
+}
+
+::selection {
+  color: var(--highlight-ink);
+  background: var(--highlight);
+  text-shadow: none;
 }
 
 body {
@@ -42,7 +53,12 @@ input {
 
 button,
 a {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: var(--highlight-soft);
+}
+
+input,
+textarea {
+  caret-color: var(--highlight);
 }
 
 button {
@@ -241,9 +257,10 @@ p {
 
 .desktop-nav > a:hover,
 .desktop-nav .nav-group > .nav-parent:hover,
-.desktop-nav .active {
-  color: var(--gold-light);
-  background: rgba(255, 255, 255, 0.07);
+.desktop-nav > a.active,
+.desktop-nav .nav-group > .nav-parent.active {
+  color: var(--highlight);
+  background: var(--highlight-soft);
 }
 
 .desktop-nav .redesigned-link {
@@ -300,13 +317,14 @@ p {
 }
 
 .dropdown a:hover {
-  color: var(--gold-light);
-  background: rgba(255, 255, 255, 0.07);
+  color: var(--highlight);
+  background: var(--highlight-soft);
 }
 
 .dropdown a.active {
-  color: var(--gold-light);
-  background: rgba(214, 168, 75, 0.12);
+  color: var(--highlight);
+  background: var(--highlight-soft);
+  box-shadow: inset 3px 0 0 var(--highlight);
 }
 
 .dropdown a.redesigned-link {
@@ -398,8 +416,8 @@ p {
 .mobile-nav-group > button:hover,
 .mobile-submenu a.active,
 .mobile-submenu a:hover {
-  color: var(--gold-light);
-  background: rgba(255, 255, 255, 0.07);
+  color: var(--highlight);
+  background: var(--highlight-soft);
 }
 
 .mobile-nav-group > button svg {
@@ -2652,7 +2670,8 @@ p {
 }
 
 .gallery-thumbs button.active {
-  border-color: var(--gold);
+  border-color: var(--highlight);
+  box-shadow: 0 0 0 2px var(--highlight-soft);
 }
 
 .gallery-thumbs img {
@@ -2896,6 +2915,17 @@ p {
   32% { opacity: 0.8; }
   52% { opacity: 0.28; transform: translate3d(13px, -15px, 0) scale(1.15); }
   75% { opacity: 0.7; }
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--highlight-soft);
 }
 
 @media (min-width: 801px) and (max-width: 1650px) {

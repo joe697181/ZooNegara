@@ -1,5 +1,10 @@
 # Changelog
 
+## 14 August 2026 — Gold interaction highlights
+
+- Added a brighter dedicated gold highlight colour across text selection, keyboard focus rings, navigation states and selected gallery controls.
+- Retained the deep forest-green foundation and existing sunlit-gold brand accents.
+
 ## 14 August 2026 — Zoo Negara Logo page
 
 - Added the Zoo Negara Logo page as the thirteenth fully redesigned route.
